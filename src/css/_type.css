@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'bitterregular';
+    src: url('/public/fonts/bitter-regular-webfont.eot');
+    src: url('/public/fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/bitter-regular-webfont.woff2') format('woff2'),
+         url('/public/fonts/bitter-regular-webfont.woff') format('woff'),
+         url('/public/fonts/bitter-regular-webfont.ttf') format('truetype'),
+         url('/public/fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #162B36;
+}
+
+h1,h2,h3{
+  font-family: 'bitterregular';
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1.25rem;
+}
+
+p{
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+i{
+  font-style: italic;
+}
+
+p a{
+  color: #00486E;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  transition: background-color .33s, color .15s
+}
+
+p a:hover{
+  background-color:#00A8FF;
+  color:#FCFEFF;
+  text-decoration:none;
+}
+
+.footer-text{
+  text-align: center;
+  font-size:.75rem;
+}
