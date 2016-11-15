@@ -1,0 +1,42 @@
+.full-page-wrapper, .sub-page-contents{
+  width:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  lost-align: middle-center;
+}
+
+.full-page-wrapper{
+  height:calc(100vh - 4em);
+}
+
+.sub-page-wrapper{
+  height:calc(100vh - 6em);
+  width:100%;
+  overflow:hidden;
+}
+
+.sub-page-contents{
+  height:calc(100vh - 6em);
+}
+
+.centered{
+  background-color:$border-highlight-low;
+  padding:1em;
+  text-align: center;
+}
+
+.project-meta{
+  position: absolute;
+  bottom: 10px;
+}
+
+.meta-left{
+  left:2em;
+  text-align:left;
+}
+
+.meta-right{
+  right:2em;
+  text-align: right;
+}

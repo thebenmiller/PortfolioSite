@@ -1,3 +1,12 @@
 const $ = require('jquery');
+const slick = require('slick-carousel');
 
-$('html').removeClass('no-js');
+$(function(){
+  $('html').removeClass('no-js');
+  $('.js-slides').slick({
+    speed: 500,
+    infinite: false,
+    dots: true,
+    appendDots: '#content-inner'
+  });
+});

@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block content
+  //- .fullscreen-bg
+  #content-inner
+    header
+      h1
+        a(href='/') The Ben Miller
+      nav.main-contact-nav
+        ul.dropdown
+          li.dropdown__control #[em.icon.icon--contact]Contact
+            ul.dropdown__list
+              li 
+                a.dropdown__link(href='mailto:thebenmiller@gmail.com') #[em.icon.icon--email]Email thebenmiller@gmail.com
+              li
+                a.dropdown__link(href='http://twitter.com/thebenmiller') #[em.icon.icon--twitter]Twitter @thebenmiller
+              li 
+                a.dropdown__link(href='http://linkedin.com/thebenmiller') #[em.icon.icon--linkedin]Linkedin
+    .full-page-wrapper(style='background-image:url("http://unsplash.it/1440/900?random=0")')
+      .centered
+        h2 Cool contente!!
+        a.button(href='example') View case study
+    .full-page-wrapper(style='background-image:url("http://unsplash.it/1440/900?random=1")')
+      .centered
+        h2 A project with a <i>Very Long</i> title!
+        p Here is a very brief description on the things I did!
+        a.button(href='example') View case study

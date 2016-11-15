@@ -42,21 +42,14 @@ i{
   font-style: italic;
 }
 
-p a{
-  color: #00486E;
-  font-weight: 400;
-  text-decoration: none;
-  font-style: italic;
-  transition: background-color .33s, color .15s
-}
-
-p a:hover{
-  background-color:#00A8FF;
-  color:#FCFEFF;
-  text-decoration:none;
-}
-
 .footer-text{
   text-align: center;
   font-size:.75rem;
+  margin-bottom:0;
+}
+
+header h1{
+  a,a:hover,a:active,a:visited{
+    color: $highlight;
+  }
 }

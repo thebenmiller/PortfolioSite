@@ -6,60 +6,64 @@
     <title>thebenmiller portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="/public/css/main.css">
   </head>
   <body>
     <div id="content">
-      <div class="fullscreen-bg"></div>
-      <div class="box box--sm">
-        <div class="box__inner">
+      <div id="content-inner">
+        <header>
           <h1>The Ben Miller</h1>
-          <p>Using creative solutions to solve interesting problems. <br>50/50 developer, ux/interaction designer. Aspiring creative coder.</p>
-          <p>Currently looking for work in NYC.</p>
-          <p><a href="/portfolio">View my design portfolio</a></p>
           <nav class="main-contact-nav">
             <ul class="dropdown">
-              <li class="dropdown__control"><em class="icon icon--contact"></em> Contact
+              <li class="dropdown__control"><em class="icon icon--contact"></em>Contact
                 <ul class="dropdown__list">
-                  <li> <a href="mailto:thebenmiller@gmail.com">thebenmiller@gmail.com</a></li>
-                  <li><a href="href://twitter.com/thebenmiller"><em class="icon icon--twitter"></em> @thebenmiller</a></li>
-                  <li> <a href="href://instagram.com/thebenmiller"><em class="icon icon--instagram"></em> @thebenmiller</a></li>
-                  <li> <a href="href://linkedin.com/thebenmiller"><em class="icon icon--linkedin"></em> linkedin</a></li>
+                  <li> <a href="mailto:thebenmiller@gmail.com" class="dropdown__link"><em class="icon icon--email"></em>Email thebenmiller@gmail.com</a></li>
+                  <li><a href="href://twitter.com/thebenmiller" class="dropdown__link"><em class="icon icon--twitter"></em>Twitter @thebenmiller</a></li>
+                  <li> <a href="href://linkedin.com/thebenmiller" class="dropdown__link"><em class="icon icon--linkedin"></em>Linkedin</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
-        </div>
-        <hr><a href="/vanity-url" class="block-link box__inner">
-          <div class="media"><img src="http://unsplash.it/150x150?random=1" width="150" height="150" class="media__img">
-            <div class="media__content"> 
-              <h2>SPACE IS VAST</h2>
-              <p>A collection / experiment of generative art. <br><em class="icon icon--tools"></em> <i>Processing</i></p>
-            </div>
-          </div></a>
-        <hr><a href="/vanity-url" class="block-link box__inner">
-          <div class="media"><img src="http://unsplash.it/150x150?random=2" width="150" height="150" class="media__img">
-            <div class="media__content"> 
-              <h2>MUSHED FACES</h2>
-              <p>Slow motion portraits, mushed with code. <br><em class="icon icon--tools"></em> <i>iphone camera, Imagemagick and node.</i></p>
-            </div>
-          </div></a>
-        <hr><a href="/vanity-url" class="block-link box__inner">
-          <div class="media"><img src="http://unsplash.it/150x150?random=3" width="150" height="150" class="media__img">
-            <div class="media__content"> 
-              <h2>FRACTALLANDER</h2>
-              <p>Game submission for the game jam PROCJAM. <br><em class="icon icon--tools"></em> <i>P5 and NodeJS</i></p>
-            </div>
-          </div></a>
-        <hr>
-        <div class="box__inner">
-          <p class="footer-text">
-             
-            Bye! Thanks for stopping by!<br><a href="mailto:thebenmiller@gmail.com">thebenmiller@gmail.com</a>
-          </p>
+        </header>
+        <div class="box box--sm">
+          <div class="box--header">
+            <p>Using creative solutions to solve interesting problems. <br>50/50 developer, ux/interaction designer. Aspiring creative coder.</p>
+            <p>Currently looking for work in NYC.</p>
+            <p><a href="/resume">View my resume.</a></p>
+          </div><a href="/portfolio" class="block-link box--preview">
+            <div class="media"><img src="http://unsplash.it/250/175?random=0" width="250" height="175" class="media__img preview__img">
+              <div class="media__content"> 
+                <h2>Design Portfolio</h2>
+                <p>Things I've worked on over the last 5+ years.</p>
+              </div>
+            </div></a><a href="/vanity-url" class="block-link box--preview">
+            <div class="media"><img src="http://unsplash.it/250/175?random=1" width="250" height="175" class="media__img">
+              <div class="media__content"> 
+                <h2>SPACE IS VAST</h2>
+                <p>A collection / experiment of generative art. <br><em class="icon icon--tools"></em><i>Processing</i></p>
+              </div>
+            </div></a><a href="/vanity-url" class="block-link box--preview">
+            <div class="media"><img src="http://unsplash.it/250/175?random=2" width="250" height="175" class="media__img">
+              <div class="media__content"> 
+                <h2>MUSHED FACES</h2>
+                <p>Slow motion portraits, mushed with code. <br><em class="icon icon--tools"></em><i>iphone camera, Imagemagick and node.</i></p>
+              </div>
+            </div></a><a href="/vanity-url" class="block-link box--preview">
+            <div class="media"><img src="http://unsplash.it/250/175?random=3" width="250" height="175" class="media__img">
+              <div class="media__content"> 
+                <h2>FRACTALLANDER</h2>
+                <p>Game submission for the game jam PROCJAM. <br><em class="icon icon--tools"></em><i>P5 and NodeJS</i></p>
+              </div>
+            </div></a>
+          <div class="box--preview">
+            <p class="footer-text">
+               
+              Bye! Thanks for stopping by!<br><a href="mailto:thebenmiller@gmail.com">thebenmiller@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <script src="public/js/main.js"></script>
+    <script src="/public/js/main.js"></script>
   </body>
 </html>
