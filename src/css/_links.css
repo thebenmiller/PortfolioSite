@@ -2,8 +2,7 @@ a, a:hover, a:active, a:visited{
   text-decoration: none;
 }
 
-a.block-link{
-  display:block;
+a.block-link, a.block-link .centered{
   transition: background-color .33s, color .15s
 }
 
@@ -14,6 +13,10 @@ a.block-link, a.block-link:hover, a.block-link:active, a.block-link:visited{
 a.block-link:hover{
   background-color:rgba(0,174,255,.9);
   color:#FCFEFF;
+  & .centered{
+    background-color:rgba(0,174,255,.9);
+    color:#FCFEFF;
+  }
 }
 
 p a{

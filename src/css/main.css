@@ -33,7 +33,9 @@ body{
 #content-inner{
   border:solid 1em $border-highlight;
   border-bottom-width: 2em;
-  background-color: $flood-bg;
+  /*background-color: $flood-bg;*/
+  background-color:$flood-bg;
+  /*background-color:#555;*/
   padding-top:2em;
   min-height:100%;
 }
@@ -52,13 +54,19 @@ header{
 .box{
   overflow: hidden;
   position: relative;
-  box-shadow:0 1px 2px 0 rgba(0,0,0,0.4);
+  box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);
   background-color:rgba(255,255,255,.95);
 }
 
 .box--md{
-  lost-center: 1000px;
-  margin-top: 3em;
+  lost-center: 650px;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.box--md2{
+  lost-center: 900px;
+  margin-top: 4em;
   margin-bottom: 4em;
 }
 
@@ -76,19 +84,18 @@ header{
 }
 
 h1.extra-lrg{
-  font-size:10vw;
+  font-size:6vw;
+  /*color:rgb(232, 237, 255);*/
   color:#fff;
+  /*text-shadow: 0px 1px 3px rgba(0,0,0,.2);*/
 }
 
-p.extra-lrg{
-  font-size:1em;
+h2.extra-lrg, h3.extra-lrg{
   color:#fff;
 }
 
 .box--sm{
   lost-center: 650px;
-  margin-top: 4em;
-  margin-bottom: 4em;
 }
 
 .box--big{
@@ -101,14 +108,37 @@ p.extra-lrg{
 }
 
 .box--preview{
+  lost-column: 1;
+  margin-bottom:1.5em;
   padding:.25em;
-  border-bottom: solid 1px rgba(0,0,0,.1);
-  &:last-child{
-    border:none;
-  }
   h2{
     margin-top: 1em;
   }
+}
+
+.box--full{
+  width:100%;
+  height:350px;
+  position: relative;
+}
+
+.intro{
+  position: relative;
+}
+
+.fullbg{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-size:cover;
+  background-repeat: no-repeat;
+  lost-align: middle-center;
+  background-position: 50% 50%;
+}
+
+.preview-box{
 }
 
 .media{

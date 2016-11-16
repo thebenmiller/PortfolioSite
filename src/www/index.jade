@@ -3,41 +3,44 @@ extends layouts/default
 block content
   //- .fullscreen-bg
   #content-inner
-    .box--md
-      .box--col-full
+    .intro.box-full
+      //- .fullbg(style='background-image:url("/public/images/image-sm2.gif")')
+      .box--md2
         h1.extra-lrg thebenmiller
-      .box--col-left
-        p.extra-lrg Hi! I'm a 50/50 developer, ux / interaction designer. Aspiring creative coder. I like use technology to solve problems.
-        p.extra-lrg Currently looking for work in NYC.
         p
-          a(href='/resume') View my resume.
-      .box--col-right
-        .box            
-          a.block-link.box--preview(href='/portfolio')
-            .media
-              img.media__img.preview__img(src='http://unsplash.it/250/150?random=0' width=250 height=150)
-              .media__content 
-                h2 Design Portfolio
-                p Things I've worked on over the last 5+ years.
-
-          a.block-link.box--preview(href='/vanity-url')
-            .media
-              img.media__img(src='http://unsplash.it/250/150?random=1' width=250 height=150)
-              .media__content 
-                h2 SPACE IS VAST
-                p A collection / experiment of generative art. <br>#[em.icon.icon--tools]<i>Processing</i>
-          a.block-link.box--preview(href='/vanity-url')
-            .media
-              img.media__img(src='http://unsplash.it/250/150?random=2' width=250 height=150)
-              .media__content 
-                h2 MUSHED FACES
-                p Slow motion portraits, mushed with code. <br>#[em.icon.icon--tools]<i>iphone camera, Imagemagick and node.</i>
-          a.block-link.box--preview(href='/vanity-url')
-            .media
-              img.media__img(src='http://unsplash.it/250/150?random=3' width=250 height=150)
-              .media__content 
-                h2 FRACTALLANDER
-                p Game submission for the game jam PROCJAM. <br>#[em.icon.icon--tools]<i>P5 and NodeJS</i>
+          h2.extra-lrg Hi! I'm a 50/50 developer, ux / interaction designer. Aspiring creative coder.
+        p
+          h2.extra-lrg Currently looking for work in NYC.
+        p
+          a.button(href='/resume') View my resume.
+    .box--full
+      a.block-link(href='/portfolio')
+        div.fullbg(style='background-image:url("http://unsplash.it/1440/900?random=0")')
+          .preview-box.centered
+            h2 Design Portfolio
+            p Things I've worked on over the last 5+ years.
+          
+    .box--md
+      .box--preview
+        h3.extra-lrg Personal projects
+      a.block-link.box--preview.box(href='/vanity-url')
+        .media
+          img.media__img(src='http://unsplash.it/250/200?random=1' width=250 height=200)
+          .media__content 
+            h2 SPACE IS VAST
+            p A collection / experiment of generative art. <br>#[em.icon.icon--tools]<i>Processing</i>
+      a.block-link.box--preview.box(href='/vanity-url')
+        .media
+          img.media__img(src='http://unsplash.it/250/200?random=2' width=250 height=200)
+          .media__content 
+            h2 MUSHED FACES
+            p Slow motion portraits, mushed with code. <br>#[em.icon.icon--tools]<i>iphone camera, Imagemagick and node.</i>
+      a.block-link.box--preview.box(href='/vanity-url')
+        .media
+          img.media__img(src='http://unsplash.it/250/200?random=3' width=250 height=200)
+          .media__content 
+            h2 FRACTALLANDER
+            p Game submission for the game jam PROCJAM. <br>#[em.icon.icon--tools]<i>P5 and NodeJS</i>
           //- .box--preview
           //-   p.footer-text 
           //-     | Bye! Thanks for stopping by!
