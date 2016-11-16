@@ -3,52 +3,43 @@ extends layouts/default
 block content
   //- .fullscreen-bg
   #content-inner
-    header
-      h1 The Ben Miller
-      nav.main-contact-nav
-        ul.dropdown
-          li.dropdown__control #[em.icon.icon--contact]Contact
-            ul.dropdown__list
-              li 
-                a.dropdown__link(href='mailto:thebenmiller@gmail.com') #[em.icon.icon--email]Email thebenmiller@gmail.com
-              li
-                a.dropdown__link(href='href://twitter.com/thebenmiller') #[em.icon.icon--twitter]Twitter @thebenmiller
-              li 
-                a.dropdown__link(href='href://linkedin.com/thebenmiller') #[em.icon.icon--linkedin]Linkedin
-    .box.box--sm
-      .box--header
-        p Using creative solutions to solve interesting problems. <br>50/50 developer, ux/interaction designer. Aspiring creative coder.
-        p Currently looking for work in NYC.
+    .box--md
+      .box--col-full
+        h1.extra-lrg thebenmiller
+      .box--col-left
+        p.extra-lrg Hi! I'm a 50/50 developer, ux / interaction designer. Aspiring creative coder. I like use technology to solve problems.
+        p.extra-lrg Currently looking for work in NYC.
         p
           a(href='/resume') View my resume.
-      a.block-link.box--preview(href='/portfolio')
-        .media
-          img.media__img.preview__img(src='http://unsplash.it/250/175?random=0' width=250 height=175)
-          .media__content 
-            h2 Design Portfolio
-            p Things I've worked on over the last 5+ years.
+      .box--col-right
+        .box            
+          a.block-link.box--preview(href='/portfolio')
+            .media
+              img.media__img.preview__img(src='http://unsplash.it/250/150?random=0' width=250 height=150)
+              .media__content 
+                h2 Design Portfolio
+                p Things I've worked on over the last 5+ years.
 
-      a.block-link.box--preview(href='/vanity-url')
-        .media
-          img.media__img(src='http://unsplash.it/250/175?random=1' width=250 height=175)
-          .media__content 
-            h2 SPACE IS VAST
-            p A collection / experiment of generative art. <br>#[em.icon.icon--tools]<i>Processing</i>
-      a.block-link.box--preview(href='/vanity-url')
-        .media
-          img.media__img(src='http://unsplash.it/250/175?random=2' width=250 height=175)
-          .media__content 
-            h2 MUSHED FACES
-            p Slow motion portraits, mushed with code. <br>#[em.icon.icon--tools]<i>iphone camera, Imagemagick and node.</i>
-      a.block-link.box--preview(href='/vanity-url')
-        .media
-          img.media__img(src='http://unsplash.it/250/175?random=3' width=250 height=175)
-          .media__content 
-            h2 FRACTALLANDER
-            p Game submission for the game jam PROCJAM. <br>#[em.icon.icon--tools]<i>P5 and NodeJS</i>
-      .box--preview
-        p.footer-text 
-          | Bye! Thanks for stopping by!
-          br
-          | #[a(href='mailto:thebenmiller@gmail.com') thebenmiller@gmail.com]
-    //- .footer-bar
+          a.block-link.box--preview(href='/vanity-url')
+            .media
+              img.media__img(src='http://unsplash.it/250/150?random=1' width=250 height=150)
+              .media__content 
+                h2 SPACE IS VAST
+                p A collection / experiment of generative art. <br>#[em.icon.icon--tools]<i>Processing</i>
+          a.block-link.box--preview(href='/vanity-url')
+            .media
+              img.media__img(src='http://unsplash.it/250/150?random=2' width=250 height=150)
+              .media__content 
+                h2 MUSHED FACES
+                p Slow motion portraits, mushed with code. <br>#[em.icon.icon--tools]<i>iphone camera, Imagemagick and node.</i>
+          a.block-link.box--preview(href='/vanity-url')
+            .media
+              img.media__img(src='http://unsplash.it/250/150?random=3' width=250 height=150)
+              .media__content 
+                h2 FRACTALLANDER
+                p Game submission for the game jam PROCJAM. <br>#[em.icon.icon--tools]<i>P5 and NodeJS</i>
+          //- .box--preview
+          //-   p.footer-text 
+          //-     | Bye! Thanks for stopping by!
+          //-     br
+          //-     | #[a(href='mailto:thebenmiller@gmail.com') thebenmiller@gmail.com]

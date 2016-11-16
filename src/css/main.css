@@ -31,7 +31,8 @@ body{
 }
 
 #content-inner{
-  border:solid 2em $border-highlight;
+  border:solid 1em $border-highlight;
+  border-bottom-width: 2em;
   background-color: $flood-bg;
   padding-top:2em;
   min-height:100%;
@@ -45,7 +46,7 @@ header{
   height:4em;
   background-color: $border-highlight;
   z-index:2;
-  padding:1em 2em 0;
+  padding:1em 1em 0;
 }
 
 .box{
@@ -53,6 +54,35 @@ header{
   position: relative;
   box-shadow:0 1px 2px 0 rgba(0,0,0,0.4);
   background-color:rgba(255,255,255,.95);
+}
+
+.box--md{
+  lost-center: 1000px;
+  margin-top: 3em;
+  margin-bottom: 4em;
+}
+
+.box--col-full{
+  lost-column: 1;
+  margin-bottom:2em;
+}
+
+.box--col-left{
+  lost-column: 1/3;
+}
+
+.box--col-right{
+  lost-column: 2/3;
+}
+
+h1.extra-lrg{
+  font-size:10vw;
+  color:#fff;
+}
+
+p.extra-lrg{
+  font-size:1em;
+  color:#fff;
 }
 
 .box--sm{
@@ -71,9 +101,11 @@ header{
 }
 
 .box--preview{
-  padding-left:.25em;
-  margin-bottom:.25em;
-  /*box-shadow:0 0 1px 0px rgba(0,174,255,1);*/
+  padding:.25em;
+  border-bottom: solid 1px rgba(0,0,0,.1);
+  &:last-child{
+    border:none;
+  }
   h2{
     margin-top: 1em;
   }

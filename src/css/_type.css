@@ -11,18 +11,20 @@
 }
 
 html,body{
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Quattrocento Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 18px;
   line-height: 1.25;
   color: #162B36;
 }
 
 h1,h2,h3{
-  font-family: 'bitterregular';
+  font-family: 'Dosis';
+  font-weight:800;
 }
 
 h1{
   font-size: 2rem;
+  font-weight: 300;
 }
 
 h2{
@@ -34,7 +36,7 @@ h3{
 }
 
 p{
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 

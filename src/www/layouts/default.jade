@@ -7,9 +7,24 @@ html.no-js
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/public/css/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Dosis:200,300,400,700,800', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700' rel='stylesheet')
   body
     //- Add your site or application content here
     #content
+      header
+        h1
+          a(href='/') thebenmiller
+        nav.main-contact-nav
+          ul.dropdown
+            li.dropdown__control #[em.icon.icon--contact]Contact
+              ul.dropdown__list
+                li 
+                  a.dropdown__link(href='mailto:thebenmiller@gmail.com') #[em.icon.icon--email]Email thebenmiller@gmail.com
+                li
+                  a.dropdown__link(href='http://twitter.com/thebenmiller') #[em.icon.icon--twitter]Twitter @thebenmiller
+                li 
+                  a.dropdown__link(href='http://linkedin.com/thebenmiller') #[em.icon.icon--linkedin]Linkedin
       block content
     
     script(src='/public/js/main.js')
