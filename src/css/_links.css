@@ -19,14 +19,14 @@ a.block-link:hover{
   }
 }
 
-p a{
+span a, p a{
   color: #00486E;
   font-weight: 400;
   font-style: italic;
   transition: background-color .33s, color .15s
 }
 
-p a:hover{
+span a:hover, p a:hover{
   background-color:#00A8FF;
   color:#FCFEFF;
 }
@@ -50,11 +50,13 @@ a.dropdown__link:hover{
   color: #00486E;
   font-weight: 400;
   font-style: italic;
-  transition: background-color .33s, color .15s;
-  background-color: rgba(255,255,255,.5);
+  transition: background-color .33s, color .15s, border-color .15s;
+  background-color: #fff;
+  border: solid 1px #00486e;
 }
 
 .button:hover{
   background-color:rgba(0,174,255,.9);
   color:#FCFEFF;
+  border-color: #fff;
 }

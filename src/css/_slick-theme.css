@@ -1,6 +1,6 @@
 /* Slider */
 .slick-loading .slick-list{
-  background: #fff url('/public/images/ajax-loader.gif') center center no-repeat;
+  background: #fff url('/public/images/assets/ajax-loader.gif') center center no-repeat;
 }
 
 /* Arrows */
@@ -22,9 +22,9 @@
   appearance: none;
   border: none;
   outline: none;
-  background-color: #00486E;
 
-  background-size: 100%;
+  background-position: 50% 50%;
+  background-size: 70%;
   background-repeat: no-repeat;
   transition:background-image .15s, background-color .15s, border-color .15s, opacity .1s;
   border: solid 1px #00486e;
@@ -39,23 +39,25 @@
 }
 
 .slick-prev{
-  background-image:svg('src/images/arrow-left', '[fill]: rgba(255,255,255,.9);');
+  background-color:#ffffff;
+  background-image:svg('src/images/assets/arrow-left', '[fill]: #00486e;');
   left: 25px;
   z-index: 2;
   &:hover{
-    background-color: rgba(255,255,255,.9);
+    background-color: #00A8FF;
     border-color: rgba(255,255,255,.9);
-    background-image:svg('src/images/arrow-left', '[fill]: #00A8FF;');
+    background-image:svg('src/images/assets/arrow-left', '[fill]: #ffffff;');
   }
 }
 
 .slick-next{
-  background-image:svg('src/images/arrow-right', '[fill]: rgba(255,255,255,.9);');
+  background-color:#ffffff;
+  background-image:svg('src/images/assets/arrow-right', '[fill]: #00486e;');
   right: 25px;
   &:hover{
-    background-color: rgba(255,255,255,.9);
+    background-color: #00A8FF;
     border-color: rgba(255,255,255,.9);
-    background-image:svg('src/images/arrow-right', '[fill]: #00A8FF;');
+    background-image:svg('src/images/assets/arrow-right', '[fill]: #ffffff;');
   }
 }
 

@@ -13,6 +13,7 @@ var gulp          = require('gulp'),
     uglify        = require('gulp-uglify'),
     source        = require('vinyl-source-stream');
     buffer        = require('vinyl-buffer'),
+    transform     = require('vinyl-transform'),
     jade          = require('gulp-jade'),
     marked        = require('marked'),
     path          = require('path'),
@@ -21,7 +22,7 @@ var gulp          = require('gulp'),
     opn           = require('opn'),
     rename        = require('gulp-rename'),
     plumber       = require('gulp-plumber'),
-    copy          = require('gulp-copy');
+    imagemin      = require('gulp-imagemin');
 
 gulp.task('connect', function() {
   connect.server({
@@ -46,29 +47,27 @@ gulp.task('css', function () {
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./build/public/css/'))
+    .pipe(gulp.dest('build/public/css/'))
     .pipe( connect.reload() );
   });
 
 gulp.task('js', function() {
-  var bundler = browserify({
-    entries: './src/js/main.js',
-    debug: true
-  });
-  bundler.transform(babelify);
-  return bundler.bundle()
+  return browserify({ entries: 'src/js/main.js', debug: true})
+    .transform('babelify', {presets: ['es2015']})
+    .bundle()
     .pipe(plumber(function (error) { gutil.log(error.message); this.emit('end');}))
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe( uglify() )
+    .pipe(uglify())
     .pipe(sourcemaps.write('./'))
-    .pipe( gulp.dest('./build/public/js/'))
-    .pipe( connect.reload() );
+    .pipe(gulp.dest('build/public/js/'))
+    .pipe(connect.reload());
 });
 
+
 gulp.task('templates', function() {
-  return gulp.src(['./src/www/**/*.jade', '!./src/www/layouts/*.jade'])
+  return gulp.src(['src/www/**/*.jade', '!src/www/layouts/*.jade'])
     .pipe(plumber(function (error) { gutil.log(error.message); this.emit('end');}))
     .pipe(jade({
       pretty: true,
@@ -87,16 +86,23 @@ gulp.task('templates', function() {
 });
 
 gulp.task('images', function(){
-  return gulp.src('./src/images/*.*')
-    .pipe(gulp.dest('./build/public/images/'));
+  return gulp.src('src/images/**/*.*')
+    .pipe(plumber(function (error) { gutil.log(error.message); this.emit('end');}))
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/public/images'))
+});
+
+gulp.task('videos', function(){
+  return gulp.src('src/videos/*.*')
+    .pipe(gulp.dest('build/public/videos'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./src/css/**/*.css',['css']);
-  gulp.watch('./src/js/**/*.js',['js']);
-  gulp.watch('./src/www/**/*.jade',['templates']);
-  gulp.watch('./src/images/*.*',['images']);
+  gulp.watch('src/css/**/*.css',['css']);
+  gulp.watch('src/js/**/*.js',['js']);
+  gulp.watch('src/www/**/*.jade',['templates']);
+  gulp.watch('src/images/*.*',['images']);
 });
 
 gulp.task('default', ['build', 'watch', 'connect']);
-gulp.task('build', ['css','js','templates','images']);
+gulp.task('build', ['css','js','templates','images','videos']);

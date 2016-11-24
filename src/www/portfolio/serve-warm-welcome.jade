@@ -1,0 +1,25 @@
+extends ../layouts/presentation
+
+block presentation
+  .project-meta.meta-left
+    span
+      a(href='/portfolio') return to projects
+  .project-meta.meta-right American Express | Serve Warm Welcome
+  .js-slides.sub-page-wrapper
+    .sub-page-contents.contain(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-1.png")')
+    .sub-page-contents.cover(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-bg.png")')
+      .box.box--big
+        p I was tasked with designing an onboarding experience for new users. Our goals were to educate new users about features on the platform reduce call volume about common questions.
+    .sub-page-contents.has-video-hide.contain(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-0.png")')
+        video.cover-video(src='/public/videos/serve-warm-welcome-video-start.mp4' autoplay loop)
+    .sub-page-contents.cover(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-bg.png")')
+      .box.box--big
+        p We used this time opportunity to add a new visual language to the site, and were able to play around with transitions to create a rich engaging experience.
+    .sub-page-contents.has-video-hide.contain(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-0.png")')
+        video.cover-video(src='/public/videos/serve-warm-welcome-video.mp4' autoplay loop)
+    .sub-page-contents.cover(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-bg.png")')
+      .box.box--big
+        p I built and tested front end prototypes for a single page app style flow that would eventually become the production code. I built a system to iterate on animations so we could quickly modify and tweak designs in live code.
+    .sub-page-contents.contain(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-4.png")')
+    .sub-page-contents.cover(style='background-image:url("/public/images/serve-warm-welcome/serve-warm-welcome-bg.png")')
+      a.button(href='/portfolio/example') View next project

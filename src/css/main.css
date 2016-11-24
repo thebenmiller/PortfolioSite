@@ -17,7 +17,6 @@ body{
   height:100%;
   z-index:-1;
   background-color: $flood-bg;
-  /*background-image:url('http://68.media.tumblr.com/c96dff6b665e4515b3b5afb3aee37da8/tumblr_of3xpjaIGv1tp1fefo1_500.gif');*/
   background-size:cover;
   border:solid 2em $border-highlight;
   border-top-width: 0;
@@ -31,12 +30,10 @@ body{
 }
 
 #content-inner{
+  background-color:$flood-bg;
   border:solid 1em $border-highlight;
   border-bottom-width: 2em;
-  /*background-color: $flood-bg;*/
-  background-color:$flood-bg;
-  /*background-color:#555;*/
-  padding-top:2em;
+  padding-top:3em;
   min-height:100%;
 }
 
@@ -66,16 +63,19 @@ header{
 
 .box-l{
   lost-column:1/4;
-  video{
-    width:100%;
-    height:100%;
-    /*margin-top:6em;*/
-    border-radius:100px;
-    overflow: hidden;
-  }
 }
 .box-r{
   lost-column:3/4;
+}
+
+.profile-image{
+  width:100%;
+  padding-bottom:100%;
+  border-radius:100px;
+  overflow: hidden;
+  background-image:url('/public/images/assets/profile.gif');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .box--md2{
@@ -99,13 +99,19 @@ header{
 
 h1.extra-lrg{
   font-size:8vw;
-  /*color:rgb(232, 237, 255);*/
   color:#fff;
-  /*text-shadow: 0px 1px 3px rgba(0,0,0,.2);*/
 }
 
-h2.extra-lrg, h3.extra-lrg{
+h2.extra-lrg{
   color:#fff;
+  font-family: 'Quattrocento Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3.extra-lrg{
+  color:#fff;
+
 }
 
 .box--sm{
@@ -114,7 +120,24 @@ h2.extra-lrg, h3.extra-lrg{
 
 .box--big{
   width: 50%;
-  background-color:rgba(255,255,255,.95);
+  padding: 1em 2.5em;
+  background-color:#fff;
+  z-index:1;
+  h2{
+    margin-bottom: .5em;
+  }
+}
+
+.text-page:after{
+  position: absolute;
+  background-color:rgba(255,255,255,.8);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  content:'';
+  z-index:0;
 }
 
 .box--header{
@@ -212,4 +235,21 @@ h2.extra-lrg, h3.extra-lrg{
   width:100%;
   height:2em;
   background-color: $border-highlight;
+}
+
+.has-video .has-video-hide{
+  background-color:#fff;
+  background-image:none!important;
+}
+
+@media screen and (max-width:550px){
+  #content-inner{
+    padding:0 .5em 2em .5em;
+    border-top-width:0;
+    border-left-width:0;
+    border-right-width:0;
+  }
+  header{
+    position: static;
+  }
 }

@@ -1,0 +1,24 @@
+extends ../layouts/presentation
+
+block presentation
+  .project-meta.meta-left
+    span
+      a(href='/portfolio') return to projects
+  .project-meta.meta-right Vice: Munchies | City Guides
+  .js-slides.sub-page-wrapper
+    .sub-page-contents.contain(style='background-image:url("/public/images/munchies/munchies-1.png")')
+    .sub-page-contents.cover(style='background-image:url("/public/images/munchies/munchies-bg.png")')
+      .box.box--big
+        p The Munchies brand needed a place for people to go to explore their favorite places in cities throughout the USA.
+    .sub-page-contents.contain(style='background-image:url("/public/images/munchies/munchies-3.png")')
+    .sub-page-contents.has-video-hide.contain(style='background-image:url("/public/images/munchies/munchies-2.png")')
+        video.cover-video(src='/public/videos/munchies-video.mp4' autoplay loop)
+    .sub-page-contents.cover(style='background-image:url("/public/images/munchies/munchies-bg.png")')
+      .box.box--big
+        p Working with a team of stakeholders at Munchies, I concepted what a city guide could look like inside the already established guidelines of the Munchies web experience. 
+    .sub-page-contents.contain(style='background-image:url("/public/images/munchies/munchies-4.png")')
+    .sub-page-contents.cover(style='background-image:url("/public/images/munchies/munchies-bg.png")')
+      .box.box--big
+        p I collaborated with our in house development team to create a mobile and desktop experience that focuses on quick comaparison, with in-roads to Munchies content built in.
+    .sub-page-contents.cover(style='background-image:url("/public/images/munchies/munchies-bg.png")')
+      a.button(href='/portfolio/example') View next project

@@ -9,29 +9,29 @@ em.icon{
 }
 
 .icon--contact{
-  background-image:svg('src/images/speech-bubble-right-2.svg', '[fill]: #00486E;');
+  background-image:svg('src/images/assets/speech-bubble-right-2.svg', '[fill]: #00486E;');
 }
 
 .dropdown__control:hover .icon--contact{
-  background-image:svg('src/images/speech-bubble-right-2.svg', '[fill]: #00A8FF;');
+  background-image:svg('src/images/assets/speech-bubble-right-2.svg', '[fill]: #00A8FF;');
 }
 
 .icon--tools{
-  background-image:svg('src/images/flask-full.svg', '[fill]: #162B36;');
+  background-image:svg('src/images/assets/flask-full.svg', '[fill]: #162B36;');
 }
 
 a:hover .icon--tools{
-  background-image:svg('src/images/flask-full.svg', '[fill]: #FCFEFF;');
+  background-image:svg('src/images/assets/flask-full.svg', '[fill]: #FCFEFF;');
 }
 
 .icon--email{
-  background-image:svg('src/images/envelope.svg');
+  background-image:svg('src/images/assets/envelope.svg');
 }
 
 .icon--linkedin{
-  background-image:svg('src/images/linkedin.svg');
+  background-image:svg('src/images/assets/linkedin.svg');
 }
 
 .icon--twitter{
-  background-image:svg('src/images/twitter.svg');
+  background-image:svg('src/images/assets/twitter.svg');
 }

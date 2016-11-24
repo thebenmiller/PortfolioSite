@@ -1,14 +1,8 @@
-/*$border-highlight: rgb(255, 245, 241);*/
-/*$border-highlight: rgb(60, 102, 255);*/
-$border-highlight: rgb(234, 234, 234);
-/*$border-highlight: #222;*/
+$border-highlight: #f5f5f5;
 
-/*$flood-bg: rgb(60, 102, 255);*/
-
-/*$flood-bg: rgb(60, 71, 92);*/
-
-$flood-bg: rgb(172, 206, 225);
+/*$flood-bg: rgb(172, 206, 225);*/
+$flood-bg: #B6E6FF;
 
 $highlight: rgb(219, 215, 215);
 
-$border-highlight-low: rgba(234, 234, 234, .85);
+$border-highlight-low: rgba(255,255,255,.9);
