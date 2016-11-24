@@ -175,9 +175,6 @@ h3.extra-lrg{
   background-position: 50% 50%;
 }
 
-.preview-box{
-}
-
 .media{
   display: flex;
 }
@@ -244,12 +241,41 @@ h3.extra-lrg{
 
 @media screen and (max-width:550px){
   #content-inner{
-    padding:0 .5em 2em .5em;
+    padding:0 .75em 2em .75em;
     border-top-width:0;
     border-left-width:0;
     border-right-width:0;
   }
   header{
     position: static;
+  }
+  .box--md2{
+    margin:0;
+    .box-full, .box-l{
+      display:none;
+    }
+    .box-r{
+      lost-column:1;
+    }
+  }
+  h2.extra-lrg{
+    font-size: 1.25rem;
+  }
+  .centered{
+    width:80%
+  }
+  .slick-arrow{
+    display:none!important;
+  }
+  .box--big{
+    width:100%;
+    padding: .5em;
+  }
+  .meta-right{
+    display:none;
+  }
+  .slick-dots{
+    width:100%;
+    bottom:40px;
   }
 }
