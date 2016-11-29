@@ -1,0 +1,308 @@
+@media only screen{
+    .dd-print-container .dd-step-2 .field-label header {
+        padding: 10px 0 0;
+        margin: 0;
+    }
+    .dd-print-container .ruleset.sm-hide {
+        margin: 30px auto;
+    }
+    .dd-print-container .btn-primary {
+        margin: 0;
+    }
+
+    .dd-print-container .dd-print-form input[type="text"] {
+        display: inline;
+        font-size: 1em;
+    }
+
+    .dd-print-container .dd-print-form .form-radio .cover {
+        background: none;
+    }
+
+    .dd-print-container .radio-selected {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dd-print-container .radio-deselected {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dd-print-container .content-box {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+    .dd-print-container .content-box-inner {
+        left: 0;
+    }
+    .dd-print-container .page-head {
+        margin-top: 0.5em;
+    }
+    .dd-print-container .input-fieldset + .input-fieldset {
+        margin-top: 0;
+    }
+    .dd-print-container .field-label header {
+        margin-top: 0 !important;
+        color: #3882bd;
+    }
+    .dd-print-container .field-label small {
+        font-size: .75em;
+        line-height: 1.2;
+    }
+    .dd-print-container .field-value {
+        margin: 0;
+        text-align: left;
+    }
+    .dd-print-container .field-value .btn-submit {
+        width: 50%;
+        float: right;
+        padding-left: 0;
+    }
+    .dd-print-container .dd-step-1 label {
+        padding: 8px 0 10px 45px;
+    }
+    .dd-print-container .label-has-input .cover {
+        top: 12px;
+    }
+    .dd-print-container .dd-step-1 .value-limit {
+        margin: 0 5px;
+    }
+    .dd-print-container .dd-sig.field-label p {
+        margin: 1.25em 0 0.25em;
+    }
+    .dd-print-container .blue-bg {
+        margin-top: 2em;
+        background: url('../Images/backgrounds/serve_blue_pattern/darkBlue_lg.jpg') repeat-x center center;
+        color: #fff;
+    }
+    .dd-print-container .blue-bg p {
+        margin: 1em 0;
+        font-size: 0.9em;
+    }
+
+    /* the check */
+    .dd-print-container .dd-check-lines, .dd-check-header {
+        overflow: hidden;
+        text-align: left;
+    }
+    .dd-print-container .dd-check-header>div { float: left; }
+
+    .dd-print-container .dd-check-header-logo {
+        width: 30%;
+    }
+    .dd-print-container .dd-check-pers-addr {
+        width: 30%;
+    }
+    .dd-print-container .dd-check-bank-addr { width: 40%; }
+    .dd-print-container .dd-check {
+        margin-top: 2em;
+    }
+    .dd-print-container .dd-check .sm-content-box {
+        position: relative;
+        width: 95%;
+        padding: 0 2% 0 3%;
+        font-size: 0.8em;
+        z-index: 10;
+    }
+    .dd-print-container .dd-check .field-label p:last-child {
+        font-size: 1.2em;
+    }
+    .dd-print-container .dd-check-header {
+        margin: 0 0 2em;
+    }
+    .dd-print-container .dd-check-header-logo .logo {
+        width: 160px;
+    }
+    .dd-print-container .dd-check-addr {
+        line-height: 1;
+    }
+    .dd-print-container .dd-check-lines span {
+        float: left;
+    }
+
+    .dd-print-container .dd-form-line {
+        display: block;
+        width: 100%;
+
+        margin-bottom: 1.4em;
+        border-bottom: 1px solid #CED0D1;
+        height: 1em;
+        float: left;
+    }
+
+    .dd-print-container .dd-check-lines .value-limit {
+        float: right;
+        margin: 0;
+    }
+    .dd-print-container .dd-check-watermark {
+        position: absolute;
+        left: -10px;
+        top: 30%;
+        width: 100%;
+        font-size: 8em;
+        font-weight: bold;
+        color: #e7e9ea;
+        text-align: center;
+        z-index: 0;
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+    }
+    .dd-print-container .dd-check-acct {
+        text-align: left;
+        margin-top: 0.5em;
+    }
+
+
+    .dd-print-container .terms-conditions {
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .dd-print-container .check-line-amount>div:first-child {
+        float: left;
+        width: 80%;
+    }
+
+    .dd-print-container .check-line-amount>input {
+        float: right;
+    }
+
+    .dd-print-container .pay-to-line {
+    }
+
+
+    .dd-print-container .pay-to-line>span:first-child {
+        width: 25%;
+        float: left;
+    }
+    .dd-print-container .pay-to-line>span:last-child {
+        width: 75%;
+    }
+    .dd-print-container .dd-check-bottom {
+        width: 92%;
+        margin-left: 4.5em;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .dd-print-container .sm-content-box {
+        margin-bottom: 0;
+    }
+    .dd-print-container .content-box {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+}
+
+
+/* MEDIUM and SMALL Breakpoint */
+@media only screen and (max-width: 45em) {
+    /* Shrink everything. Maintain check form factor*/
+
+    .dd-print-container .dd-check-header-logo {
+        width: 40%;
+    }
+    .dd-print-container .dd-check-pers-addr {
+        width: 30%;
+    }
+    .dd-print-container .dd-check-bank-addr { width: 30%; }
+
+    .dd-print-container .dd-check .content-box {
+        padding-bottom: 0em;
+    }
+
+    .dd-print-container .dd-check-header {
+        margin-bottom: 0;
+
+    }
+    .dd-print-container .dd-check-header p {
+        margin-bottom: 0;
+    }
+    .dd-print-container .dd-check .sm-content-box {
+        font-size: 0.6em;
+    }
+
+    .dd-print-container .check-line-amount>div:first-child {
+        width: 70%;
+    }
+
+    .dd-print-container .check-line-amount>div:last-child {
+        width: 30%;
+    }
+
+    .dd-print-container .dd-check-watermark {
+        left: -55px;
+        top: 28%;
+        font-size: 5em;
+
+    }
+
+    .dd-print-container .dd-check input {
+        height: 3em;
+    }
+
+    .dd-print-container .dd-check .sm-content-box {
+        padding-bottom: 4em;
+    }
+    .dd-print-container .dd-check-bottom {
+        margin-top: 1em;
+    }
+
+}
+
+/* SMALL breakpoint */
+@media only screen and (max-width : 31.1875em) {
+
+    .dd-print-container .field-value .btn-submit {
+        float: none;
+    }
+    .dd-print-container .dd-check-header-logo {
+        width: 36%;
+        margin-right: 4%;
+    }
+    .dd-print-container .dd-check-pers-addr {
+        width: 30%;
+    }
+    .dd-print-container .dd-check-bank-addr { width: 30%; }
+
+    .dd-print-container .dd-check .sm-content-box {
+        padding-top: 0.3em;
+    }
+    .dd-print-container .dd-check-bottom {
+        margin-left: 0;
+    }
+
+    .dd-print-container .dd-check input {
+        width: 4em;
+        height: 2.5em;
+    }
+
+    .dd-print-container .dd-check-header p {
+        font-size: 0.7em;
+    }
+
+    .dd-print-container .pay-to-line span:first-child {
+        width: 50%;
+
+    }
+
+    .dd-print-container .pay-to-line span:last-child {
+        width: 50%;
+    }
+
+    .dd-print-container .dd-form-line {
+        margin-bottom: 0.2em;
+    }
+
+    .dd-print-container .check-line-amount>div:first-child {
+        width: 80%;
+    }
+
+    .dd-print-container .dd-check .field-label:first-child  {
+        margin-right: 2em;
+    }
+
+    .dd-print-container .dd-check-watermark {
+    }
+}
