@@ -15,6 +15,7 @@
   height:calc(100vh - 6em);
   width:100%;
   overflow:hidden;
+  position: relative;
 }
 
 .sub-page-contents{

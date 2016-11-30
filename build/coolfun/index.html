@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>thebenmiller portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <h1><a href="/">thebenmiller</a></h1>
+        <nav class="main-contact-nav">
+          <ul class="dropdown">
+            <li class="dropdown__control"><em class="icon icon--contact"></em>Contact
+              <ul class="dropdown__list">
+                <li> <a href="mailto:thebenmiller@gmail.com" class="dropdown__link"><em class="icon icon--email"></em>Email thebenmiller@gmail.com</a></li>
+                <li><a href="http://twitter.com/thebenmiller" class="dropdown__link"><em class="icon icon--twitter"></em>Twitter @thebenmiller</a></li>
+                <li> <a href="http://linkedin.com/thebenmiller" class="dropdown__link"><em class="icon icon--linkedin"></em>Linkedin</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="content-inner">
+        <div class="project-meta meta-left"><span><a href="/">return to home</a></span></div>
+        <div class="project-meta meta-right">Eye Mouths</div>
+        <div id="project-container" class="sub-page-wrapper">
+          <div class="sub-page-contents">
+            <video id="videoel" width="400" height="300" preload="auto" loop></video>
+            <canvas id="vidcanvas" width="400" height="300"></canvas>
+            <canvas id="l_eye" width="400" height="300"></canvas>
+            <canvas id="r_eye" width="400" height="300"></canvas>
+            <div id="info" class="centered">
+              <h2>Allow camera access, then press Start!</h2>
+              <p>This works best with even light. If you wear glasses, take them off for a moment.</p><a id="startbutton" class="button disabled">Waiting for camera...</a>
+            </div>
+          </div>
+          <script src="/public/js/clmtrackr/js/utils.js"></script>
+          <script src="/public/js/clmtrackr/js/numeric-1.2.6.min.js"></script>
+          <script src="/public/js/clmtrackr/js/mosse.js"></script>
+          <script src="/public/js/clmtrackr/js/jsfeat-min.js"></script>
+          <script src="/public/js/clmtrackr/js/frontalface.js"></script>
+          <script src="/public/js/clmtrackr/js/jsfeat_detect.js"></script>
+          <script src="/public/js/clmtrackr/js/left_eye_filter.js"></script>
+          <script src="/public/js/clmtrackr/js/right_eye_filter.js"></script>
+          <script src="/public/js/clmtrackr/js/nose_filter.js"></script>
+          <script src="/public/js/clmtrackr/models/model_pca_20_svm.js"></script>
+          <script src="/public/js/clmtrackr/js/clm.js"></script>
+          <script src="/public/js/clmtrackr/js/svmfilter_webgl.js"></script>
+          <script src="/public/js/clmtrackr/js/svmfilter_fft.js"></script>
+          <script src="/public/js/clmtrackr/js/mossefilter.js"></script>
+          <script src="/public/js/clmtrackr/js/Stats.js"></script>
+          <script src="/public/js/eyemouths.js"></script>
+        </div>
+      </div>
+    </div>
+    <script src="/public/js/main.js"></script>
+  </body>
+</html>

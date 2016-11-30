@@ -1,0 +1,33 @@
+extends layouts/presentation
+
+block presentation
+  .project-meta.meta-left
+    span
+      a(href='/') return to home
+  .project-meta.meta-right Eye Mouths
+  #project-container.sub-page-wrapper
+    .sub-page-contents
+      video#videoel(width='400' height='300' preload='auto' loop)
+      canvas#vidcanvas(width='400' height='300')
+      canvas#l_eye(width='400' height='300')
+      canvas#r_eye(width='400' height='300')
+      #info.centered
+        h2 Allow camera access, then press Start!
+        p This works best with even light. If you wear glasses, take them off for a moment.
+        a.button.disabled#startbutton Waiting for camera...
+    script(src='/public/js/clmtrackr/js/utils.js')
+    script(src='/public/js/clmtrackr/js/numeric-1.2.6.min.js')
+    script(src='/public/js/clmtrackr/js/mosse.js')
+    script(src='/public/js/clmtrackr/js/jsfeat-min.js')
+    script(src='/public/js/clmtrackr/js/frontalface.js')
+    script(src='/public/js/clmtrackr/js/jsfeat_detect.js')
+    script(src='/public/js/clmtrackr/js/left_eye_filter.js')
+    script(src='/public/js/clmtrackr/js/right_eye_filter.js')
+    script(src='/public/js/clmtrackr/js/nose_filter.js')
+    script(src='/public/js/clmtrackr/models/model_pca_20_svm.js')
+    script(src='/public/js/clmtrackr/js/clm.js')
+    script(src='/public/js/clmtrackr/js/svmfilter_webgl.js')
+    script(src='/public/js/clmtrackr/js/svmfilter_fft.js')
+    script(src='/public/js/clmtrackr/js/mossefilter.js')
+    script(src='/public/js/clmtrackr/js/Stats.js')
+    script(src='/public/js/eyemouths.js')

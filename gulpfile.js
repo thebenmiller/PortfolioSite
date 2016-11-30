@@ -42,7 +42,7 @@ gulp.task('css', function () {
     autoprefixer({browsers: ['last 1 version']}),
     cssnano(),
     ];
-  return gulp.src('./src/css/main.css')
+  return gulp.src('src/css/main.css')
     .pipe(plumber(function (error) { gutil.log(error.message); this.emit('end');}))
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
@@ -65,6 +65,11 @@ gulp.task('js', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('js-alt', function(){
+  return gulp.src(['src/js/**/*.js', '!src/js/main.js'])
+    .pipe(uglify())
+    .pipe(gulp.dest('build/public/js/'));
+});
 
 gulp.task('templates', function() {
   return gulp.src(['src/www/**/*.jade', '!src/www/layouts/*.jade'])
@@ -99,10 +104,10 @@ gulp.task('videos', function(){
 
 gulp.task('watch', function () {
   gulp.watch('src/css/**/*.css',['css']);
-  gulp.watch('src/js/**/*.js',['js']);
+  gulp.watch('src/js/**/*.js',['js', 'js-alt']);
   gulp.watch('src/www/**/*.jade',['templates']);
   gulp.watch('src/images/*.*',['images']);
 });
 
 gulp.task('default', ['build', 'watch', 'connect']);
-gulp.task('build', ['css','js','templates','images','videos']);
+gulp.task('build', ['css','js','js-alt','templates','images','videos']);

@@ -41,7 +41,7 @@
 .slick-prev{
   background-color:#ffffff;
   background-image:svg('src/images/assets/arrow-left', '[fill]: #00486e;');
-  left: 25px;
+  left: 10px;
   z-index: 2;
   &:hover{
     background-color: #00A8FF;
@@ -53,7 +53,7 @@
 .slick-next{
   background-color:#ffffff;
   background-image:svg('src/images/assets/arrow-right', '[fill]: #00486e;');
-  right: 25px;
+  right: 10px;
   &:hover{
     background-color: #00A8FF;
     border-color: rgba(255,255,255,.9);

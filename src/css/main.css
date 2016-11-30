@@ -6,6 +6,7 @@
 @import '_portfolio.css';
 @import '_slick.css';
 @import '_slick-theme.css';
+@import '_eyemouths.css';
 
 body{
   background-color: #FCFEFF;
@@ -69,6 +70,7 @@ header{
 }
 
 .profile-image{
+  display:block;
   width:100%;
   padding-bottom:100%;
   border-radius:100px;
@@ -78,10 +80,11 @@ header{
   background-size: 100%;
 }
 
-.box--md2{
+.box--md-top{
   lost-center: 900px;
   margin-top: 6em;
   margin-bottom: 6em;
+  padding:0 2em;
 }
 
 .box--col-full{
@@ -249,8 +252,9 @@ h3.extra-lrg{
   header{
     position: static;
   }
-  .box--md2{
+  .box--md-top{
     margin:0;
+    padding:0;
     .box-full, .box-l{
       display:none;
     }

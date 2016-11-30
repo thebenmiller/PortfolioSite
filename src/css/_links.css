@@ -60,3 +60,14 @@ a.dropdown__link:hover{
   color:#FCFEFF;
   border-color: #fff;
 }
+
+
+.button.disabled{
+  cursor: not-allowed;
+}
+
+.button.disabled:hover{
+  background-color:inherit;
+  color:inherit;
+  border-color:inherit;
+}
