@@ -52,6 +52,7 @@
 .meta-right{
   right: 1.5rem;
   text-align: right;
+  color: rgba(255,255,255,.9)
 }
 
 .cover-video{

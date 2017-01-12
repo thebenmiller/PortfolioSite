@@ -23,6 +23,7 @@ var gulp          = require('gulp'),
     rename        = require('gulp-rename'),
     plumber       = require('gulp-plumber'),
     imagemin      = require('gulp-imagemin');
+    concat        = require('gulp-concat');
 
 gulp.task('connect', function() {
   connect.server({
@@ -66,9 +67,21 @@ gulp.task('js', function() {
 });
 
 gulp.task('js-alt', function(){
-  return gulp.src(['src/js/**/*.js', '!src/js/main.js'])
+  return gulp.src(['src/js/*.js', '!src/js/main.js'])
     .pipe(uglify())
     .pipe(gulp.dest('build/public/js/'));
+});
+
+gulp.task('js-vendor', function(){
+  return gulp.src('src/js/vendor/**/*.js')
+    .pipe(gulp.dest('build/public/js/'));
+});
+
+gulp.task('precompile', function(){
+  return gulp.src('src/js/vendor/**/*.js')
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('src/js/compiled/'));
 });
 
 gulp.task('templates', function() {
@@ -104,7 +117,8 @@ gulp.task('videos', function(){
 
 gulp.task('watch', function () {
   gulp.watch('src/css/**/*.css',['css']);
-  gulp.watch('src/js/**/*.js',['js', 'js-alt']);
+  gulp.watch('src/js/*.js',['js', 'js-alt']);
+  gulp.watch('src/js/vendor/**/*.js', ['js-vendor']);
   gulp.watch('src/www/**/*.jade',['templates']);
   gulp.watch('src/images/*.*',['images']);
 });

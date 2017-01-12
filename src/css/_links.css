@@ -3,16 +3,19 @@ a, a:hover, a:active, a:visited{
 }
 
 a.block-link, a.block-link .centered{
-  transition: background-color .33s, color .15s
+  transition: background-color .33s, color .15s, border-color .15s;
 }
 
 a.block-link, a.block-link:hover, a.block-link:active, a.block-link:visited{
   color:#162B36;
+  background-color: #fff;
+  border: solid 1px #00486e;
 }
 
 a.block-link:hover{
   background-color:rgba(0,174,255,.9);
   color:#FCFEFF;
+  border-color: #fff;
   & .centered{
     background-color:rgba(0,174,255,.9);
     color:#FCFEFF;
@@ -39,6 +42,10 @@ a.dropdown__list{
 
 a.dropdown__link:hover{
   text-decoration:underline
+}
+
+a.meta{
+  color:#f2f9fd;
 }
 
 .button{

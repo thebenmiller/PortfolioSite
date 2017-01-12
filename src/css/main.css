@@ -31,7 +31,7 @@ body{
 }
 
 #content-inner{
-  background-color:$flood-bg;
+  background-color: $flood-bg;
   border:solid 1em $border-highlight;
   border-bottom-width: 2em;
   padding-top:3em;
@@ -52,8 +52,8 @@ header{
 .box{
   overflow: hidden;
   position: relative;
-  box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);
-  background-color:rgba(255,255,255,.95);
+  /*box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);*/
+  /*background-color:rgba(255,255,255,.95);*/
 }
 
 .box--md{
@@ -83,7 +83,7 @@ header{
 .box--md-top{
   lost-center: 900px;
   margin-top: 6em;
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   padding:0 2em;
 }
 
@@ -100,21 +100,8 @@ header{
   lost-column: 2/3;
 }
 
-h1.extra-lrg{
-  font-size:8vw;
-  color:#fff;
-}
-
-h2.extra-lrg{
-  color:#fff;
-  font-family: 'Quattrocento Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-h3.extra-lrg{
-  color:#fff;
-
+h3.extra-space{
+  margin:1.5em 0;
 }
 
 .box--sm{
@@ -213,7 +200,7 @@ h3.extra-lrg{
 }
 
 .dropdown__control{
-  color:#00486E;
+  color:#f2f9fd;
   text-align: right;
   transition: color .15s;
   cursor: pointer;

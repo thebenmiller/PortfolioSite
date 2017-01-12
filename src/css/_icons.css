@@ -9,7 +9,7 @@ em.icon{
 }
 
 .icon--contact{
-  background-image:svg('src/images/assets/speech-bubble-right-2.svg', '[fill]: #00486E;');
+  background-image:svg('src/images/assets/speech-bubble-right-2.svg', '[fill]: #f2f9fd;');
 }
 
 .dropdown__control:hover .icon--contact{

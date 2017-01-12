@@ -157,86 +157,16 @@ window.URL = window.URL || window.webkitURL || window.msURL || window.mozURL;
     rctx.clearRect(0,0,rcanvas.width,rcanvas.height);
     lctx.clearRect(0,0,lcanvas.width,lcanvas.height);
 
-
-    // overlayCtx.clearRect(0,0,400,300);
-    // var overlayImageData = overlayCtx.getImageData(0, 0, 400, 300);
-    // var overlayData = overlayImageData.data;
-
-    // var _x = getMin(mouth,0);
-    // var _x2 = getMax(mouth,0);
-    // var _y = getMin(mouth,1);
-    // var _y2 = getMax(mouth,1);
-    // var _w = Math.floor(_x2-_x);
-    // var _h = Math.floor(_y2-_y);
-
-
     var mouthMask = getMouthParameters(mouth, mouth_vert);
     var _x = mouthMask.x - mouthMask.rX;
     var _y = mouthMask.y - mouthMask.rY;
     var _w = mouthMask.rX;
+    var _lw = (l_pos.rX + _w) / 2;
+    var _rw = (r_pos.rX + _w) / 2;
     var _h = mouthMask.rY;
 
-    // lctx.save();
-    // lctx.globalCompositeOperation = "source-atop";
-    // lctx.translate(positions[27][0]-mouthMask.x, positions[27][1]-mouthMask.y);
-    // lctx.drawImage(vid,0,0,lcanvas.width,lcanvas.height);
-    // lctx.restore();
-
-    // rctx.rect(0,0,rcanvas.width,rcanvas.height);
-    // var r_grad = rctx.createRadialGradient(positions[32][0], positions[32][1],0,positions[32][0], positions[32][1],_h);
-    // r_grad.addColorStop(0, 'rgba(0,255,0,1)');
-    // r_grad.addColorStop(.75, 'rgba(0,255,0,1)');
-    // r_grad.addColorStop(1, 'rgba(0,255,0,0)');
-    // rctx.fillStyle = r_grad;
-    // rctx.fill();
-
-    // rctx.save();
-    // rctx.globalCompositeOperation = "source-atop";
-    // rctx.translate(positions[32][0]-mouthMask.x, positions[32][1]-mouthMask.y);
-    // rctx.drawImage(vid,0,0,lcanvas.width,lcanvas.height);
-    // rctx.restore();
-
-
-
-    //console.log(mouthMask.x, mouthMask.y, mouthMask.rx, mouthMask.ry, _x, _y, _w, _h);
-
-
-    //var mouthPixels = videoCtx.getImageData(0, 0, video.width, video.height);
-
-
-    // overlayCtx.save();
-    // //overlayCtx.beginPath();
-    // //overlayCtx.ellipse(positions[27][0], positions[27][1], mouthMask.rX, mouthMask.rY, mouthMask.rot, 0, Math.PI*2);
-    // //overlayCtx.closePath();
-
-    // overlayCtx.rect(0,0,overlay.width, overlay.height);
-    // //var grad = overlayCtx.createRadialGradient(0, 0, 100, 0, 0, 0);
-    // var grad = overlayCtx.createRadialGradient(238, 50, 10, 238, 50, 300);
-    // grad.addColorStop(0,'#FF0000');
-    // grad.addColorStop(1,'#00FFFF');
-    // overlayCtx.fillStype = grad;
-    // overlayCtx.fill();
-
-    //overlayCtx.clip();
-    //overlayCtx.globalCompositeOperation = "source-atop";
-    //overlayCtx.drawImage(renderCanvas,positions[27][0] - _w/2, positions[27][1] - _h/2,_w,_h);
-    // overlayCtx.restore();
-    //overlayCtx.ellipse(positions[27][0] - _w/2, positions[27][1] - _h/2,_w,_h, mouthMask.rX, mouthMask.rY, mouthMask.rot, 0, Math.PI*2);
-
-    //overlayCtx.restore();
-
-    //overlayCtx.drawImage(renderCtx.canvas,positions[27][0] - _w/2, positions[27][1] - _h/2,_w,_h);
-    //overlayCtx.putImageData(mouthPixels,positions[27][0] - _w/2, positions[27][1] - _h/2);
-    //overlayCtx.putImageData(mouthPixels,positions[32][0] - _w/2, positions[32][1] - _h/2);
-
-
-    //overlayCtx.rect(0, 0, 200, 200);
-
-    // create radial gradient
-    //var grd = overlayCtx.createRadialGradient(positions[27][0], positions[27][1], 0, positions[27][0], positions[27][1], mouthMask.rY);
-
     lctx.save();
-    drawScaledGradient(lcanvas,lctx,positions[27][0],positions[27][1],_w,_h);
+    drawScaledGradient(lcanvas,lctx,positions[27][0],positions[27][1],_lw,_h);
     lctx.restore();
     lctx.save();
     lctx.globalCompositeOperation = "source-atop";
@@ -245,7 +175,7 @@ window.URL = window.URL || window.webkitURL || window.msURL || window.mozURL;
     lctx.restore();
 
     rctx.save();
-    drawScaledGradient(rcanvas,rctx,positions[32][0],positions[32][1],_w,_h);
+    drawScaledGradient(rcanvas,rctx,positions[32][0],positions[32][1],_rw,_h);
     rctx.restore();
     rctx.save();
     rctx.globalCompositeOperation = "source-atop";
@@ -316,8 +246,8 @@ function getMouthParameters(mouth,mouth_vert){
   var _yMax = getMax(mouth,1);
   var _mouthCenter = getCenter(mouth);
   var _rot = Math.atan2(mouth[5][1]-mouth[0][1],mouth[5][0]-mouth[0][0]);
-  var _rX = _xMax-_xMin;//Math.sqrt( Math.pow(mouth[5][1]-mouth[0][1],2) + Math.pow(mouth[5][0]-mouth[0][0],2) ) / 2;
-  var _rY = _yMax-_yMin;//Math.sqrt( Math.pow(mouth_vert[0][1]-mouth_vert[1][1],2) + Math.pow(mouth_vert[0][0]-mouth_vert[1][0],2) );
+  var _rX = _xMax-_xMin;
+  var _rY = _yMax-_yMin;
   return {
     x: _mouthCenter[0],
     y: _mouthCenter[1],
