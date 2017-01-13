@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".privacy-frame");e.length&&e.responsiveIframe({xdomain:"*"})});

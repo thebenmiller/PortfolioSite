@@ -1,0 +1,77 @@
+/**********
+
+THIS STYLESHEET CONTAINS POST-3000 FIXES AND CHANGES BY BLUESTATEDIGITAL
+
+This CSS should be incorporated into the  refactored SCSS sheets developed by Amex as soon as is feasible.
+
+**********/
+
+
+/**********
+
+1. Address mobile breakpoint styling issues for
+/index.php?key=flow-my-account&screen=profile-withdraw-review
+
+**********/
+
+@media only screen and (max-width : 39em) {
+    .transfer-to .field-value {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width : 45em) {
+    .full-width .field-sub {
+        width: 100%;
+    }
+}
+.full-width .field-sub {
+    letter-spacing: normal;
+    text-align: left;
+}
+@media only screen and (min-width : 31.25em) and (max-width : 56em) {
+    .full-width .field-sub {
+    	width: 83.333333%;
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+}
+@media only screen and (min-width : 56em) {
+    .full-width .field-sub {
+    	width: 80%;
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+}
+
+/**********
+
+2. Add global superscript styling for registration marks
+
+**********/
+
+sup {
+    bottom: 3px;
+    font-size: 70%;
+    position: relative;
+    display: inline-block;
+}
+a:hover sup {
+    text-decoration: none;
+}
+
+
+/**********
+
+3. A fix for the padding under the return-link div in a specific situation.
+/index.php?key=detail-views&screen=request-insufficient-funds-detail-error
+Might be better as a margin-bottom on the return-link div instead of top margins on divs that follow
+
+**********/
+
+.subnav.return-link + .overlay-img-loader + div + .message-container {
+	margin-top: 18px;
+}
+
+
+
