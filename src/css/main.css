@@ -208,10 +208,8 @@ h3.extra-space{
 }
 
 .dropdown__control:hover{
-
   color:#00A8FF;
   max-height:99em;
-
   .dropdown__list{
     visibility: visible;
     opacity: 1;
