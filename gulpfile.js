@@ -74,7 +74,7 @@ gulp.task('js-alt', function(){
 
 gulp.task('js-vendor', function(){
   return gulp.src('src/js/vendor/**/*.js')
-    .pipe(gulp.dest('build/public/js/'));
+    .pipe(gulp.dest('build/public/js/vendor/'));
 });
 
 gulp.task('precompile', function(){
