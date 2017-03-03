@@ -100,6 +100,10 @@ header{
   lost-column: 2/3;
 }
 
+h2.extra-space{
+  margin-bottom: .5em;
+}
+
 h3.extra-space{
   margin:1.25em 0;
 }
