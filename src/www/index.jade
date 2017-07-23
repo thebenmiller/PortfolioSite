@@ -10,11 +10,11 @@ block content
         .box-r
           h1 Hi, I'm Ben.
           h3.extra-space I'm a ux / interaction designer and front end developer. In my free time I'm an aspiring creative coding artist.
-          h3.extra-space Currently looking for work in NYC.
-          p
-            a.button(href='/portfolio/' target='_blank') Check out my design portfolio.
-          p
-            a.button(href='/public/BenMillerResume.pdf' target='_blank') View my resume.
+          h3.extra-space Currently a senior creative technologist at #[a(href="http://method.com" target="_blank") Method], NYC.
+          //- p
+          //-   a.button(href='/portfolio/' target='_blank') Check out my design portfolio.
+          //- p
+          //-   a.button(href='/public/BenMillerResume.pdf' target='_blank') View my resume.
     .box--md
       .box--preview
         h1 Some personal projects
@@ -30,6 +30,28 @@ block content
           .media__content 
             h2 MUSHED FACES
             p Slow motion portraits, mushed with code. <br>#[em.icon.icon--tools]<i>iphone camera, Imagemagick and NodeJS.</i>
+      .box--md
+        .box--preview
+          h1 Twitter bots
+        a.block-link.box--preview.box(href='http://twitter.com/yomamamachine' target='_blank')
+          .media
+            img.media__img(src='/public/images/assets/bots/yomamamachine.jpg' width=250 height=200)
+            .media__content 
+              h2 YO MAMA MACHINE
+              p Generates yo mama jokes. <br>#[em.icon.icon--tools]<i>Python, NodeJS</i>
+        a.block-link.box--preview.box(href='http://twitter.com/supmillennials' target='_blank')
+          .media
+            img.media__img(src='/public/images/assets/bots/supmillennials.jpg' width=250 height=200)
+            .media__content 
+              h2 SUP MILLENNIALS
+              p Tweets about the things millennials are killing. <br>#[em.icon.icon--tools]<i>Python, NLTK, NodeJS</i>
+        a.block-link.box--preview.box(href='http://twitter.com/thisnotthatbot' target='_blank')
+          .media
+            img.media__img(src='/public/images/assets/bots/thisnotthatbot.jpg' width=250 height=200)
+            .media__content 
+              h2 THIS NOT THAT BOT
+              p Rhyming bot doing 'hugs not drugs' phrases. <br>#[em.icon.icon--tools]<i>Python, NLTK, NodeJS</i>
+      
       //- a.block-link.box--preview.box(href='/vanity-url')
       //-   .media
       //-     img.media__img(src='http://unsplash.it/250/200?random=3' width=250 height=200)
